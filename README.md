@@ -1,6 +1,8 @@
 # frps
+Document: [https://github.com/fatedier/frp/blob/master/README.md](https://github.com/fatedier/frp/blob/master/README.md)
 
-```shell
+# use
+```
 $ mkdir /opt/frps/config
 $ touch /opt/frps/config/frps.ini
 
