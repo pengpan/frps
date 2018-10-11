@@ -4,7 +4,20 @@ Document: [https://github.com/fatedier/frp/blob/master/README.md](https://github
 # use
 ```
 $ mkdir /opt/frps/config
-$ touch /opt/frps/config/frps.ini
+
+$ cat > /opt/frps/config/frps.ini << EOF
+# frps.ini
+[common]
+bind_port = 7000
+
+vhost_http_port = 80
+vhost_https_port = 443
+
+dashboard_port = 7500
+# dashboard's username and password are both optional，if not set, default is admin.
+dashboard_user = admin
+dashboard_pwd = admin
+EOF
 
 $ docker run -d --name frp-server -p 7000:7000 -p 8305:7500 -p 8306:80 -p 8443:443 -v /opt/frps/config:/conf pengpan/frps
 ```
