@@ -19,5 +19,11 @@ dashboard_user = admin
 dashboard_pwd = admin
 EOF
 
-$ docker run --name frp-server --restart=always -p 6000:6000 -p 7000:7000 -p 8305:7500 -p 8306:80 -p 8307:443 -v /opt/frps/config:/conf -d pengpan/frps
+$ docker run --name frp-server --restart=always \
+-p 6000:6000 \
+-p 7000:7000 \
+-p 8305:7500 \
+-p 8306:80 \
+-p 8307:443 \
+-v /opt/frps/config:/conf -d pengpan/frps
 ```
