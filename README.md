@@ -1,7 +1,7 @@
 # frps
 Document: [https://github.com/fatedier/frp/blob/master/README.md](https://github.com/fatedier/frp/blob/master/README.md)
 
-# use
+# how to use
 ```
 $ mkdir /opt/frps/config
 
@@ -19,5 +19,5 @@ dashboard_user = admin
 dashboard_pwd = admin
 EOF
 
-$ docker run -d --name frp-server -p 7000:7000 -p 8305:7500 -p 8306:80 -p 8443:443 -v /opt/frps/config:/conf pengpan/frps
+$ docker run --name frp-server --restart=always -p 7000:7000 -p 8305:7500 -p 8306:80 -p 8307:443 -v /opt/frps/config:/conf -d pengpan/frps
 ```
